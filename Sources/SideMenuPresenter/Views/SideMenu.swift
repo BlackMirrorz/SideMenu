@@ -158,6 +158,9 @@ public struct SideMenu<Content: View>: View {
         bottomTrailingRadius: alignment == .left ? cornerRadius : 0,
         topTrailingRadius: alignment == .left ? cornerRadius : 0
       ).ignoresSafeArea(.all)
+      .onTapGesture {
+        shouldShowSideMenu = false
+      }
   }
   
   @ViewBuilder
