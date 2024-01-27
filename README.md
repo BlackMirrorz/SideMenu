@@ -1,7 +1,7 @@
-# SideMenu Swift Package Guide
+# SideMenuPresenter Swift Package Guide
 
 ## Overview
-The `SideMenu` Swift package provides a customizable, vertical side menu for SwiftUI applications, featuring various configurations for sizing, background types, alignment, and more.
+The `SideMenuPresenter` Swift package provides a customizable, vertical side menu for SwiftUI applications, featuring various configurations for sizing, background types, alignment, and more.
 
 ## Features
 - **Sizing Methods**: Choose between fixed width or percentage of screen width.
@@ -16,7 +16,7 @@ The `SideMenu` Swift package provides a customizable, vertical side menu for Swi
 ### Importing the Package
 
 ```swift
-import SideMenu
+import SideMenuPresenter
 ```
 
 ### Initializing SideMenu Without A Toolbar
