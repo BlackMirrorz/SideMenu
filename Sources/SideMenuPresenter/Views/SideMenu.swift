@@ -142,7 +142,13 @@ public struct SideMenu<Content: View>: View {
           .offset(x: currentOffset)
           .tapAndDragGestureRecognition { handleGesture($0) }.disabled(sideMenuDisabled)
       } .background {
-        dimBackground.opacity(backgroundOpacity).ignoresSafeArea()
+        dimBackground
+          .opacity(backgroundOpacity)
+          .ignoresSafeArea()
+          .onTapGesture {
+            shouldShowSideMenu = false
+          }
+        
       }
     }
   }
@@ -157,10 +163,7 @@ public struct SideMenu<Content: View>: View {
         bottomLeadingRadius: alignment == .left ? 0 : cornerRadius,
         bottomTrailingRadius: alignment == .left ? cornerRadius : 0,
         topTrailingRadius: alignment == .left ? cornerRadius : 0
-      ).ignoresSafeArea(.all)
-      .onTapGesture {
-        shouldShowSideMenu = false
-      }
+      )
   }
   
   @ViewBuilder
