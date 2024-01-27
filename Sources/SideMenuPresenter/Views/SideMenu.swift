@@ -144,11 +144,10 @@ public struct SideMenu<Content: View>: View {
       } .background {
         dimBackground
           .opacity(backgroundOpacity)
-          .ignoresSafeArea()
+          .ignoresSafeArea(.all)
           .onTapGesture {
             shouldShowSideMenu = false
           }
-        
       }
     }
   }
@@ -163,7 +162,8 @@ public struct SideMenu<Content: View>: View {
         bottomLeadingRadius: alignment == .left ? 0 : cornerRadius,
         bottomTrailingRadius: alignment == .left ? cornerRadius : 0,
         topTrailingRadius: alignment == .left ? cornerRadius : 0
-      )
+      ).ignoresSafeArea(.all)
+      
   }
   
   @ViewBuilder
