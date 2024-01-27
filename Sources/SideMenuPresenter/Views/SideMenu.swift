@@ -8,30 +8,30 @@
 import SwiftUI
 
 /// Simple class for creating a vertical SideMenu
-struct SideMenu<Content: View>: View {
+public struct SideMenu<Content: View>: View {
   
   /// The sizing method of the SideMenu
-  enum SideMenuSizingMethod {
+  public enum SideMenuSizingMethod {
     case fixed(CGFloat), percentageOfScreen(CGFloat)
   }
   
   /// The type of dimmed background
-  enum SideMenuDimBackgroudType {
+  public enum SideMenuDimBackgroudType {
     case color(Color), blur, none
   }
   
   /// The state of the SideMenu
-  enum SidemMenuState: String {
+  public enum SidemMenuState: String {
     case onOpen, onDismiss
   }
   
   /// The horizontal aligjnemt of the SideMenu
-  enum Alignment {
+  public enum Alignment {
     case left, right
   }
   
   /// The type of gestures to dismiss the SideMenu
-  enum DismissType {
+  public enum DismissType {
     case tap, drag, tapAndDrag
   }
   
@@ -123,7 +123,7 @@ struct SideMenu<Content: View>: View {
   
   // MARK: - Body
   
-  var body: some View {
+  public var body: some View {
     
     ZStack {
       GeometryReader { proxy in
