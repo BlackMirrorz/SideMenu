@@ -4,15 +4,15 @@
 import PackageDescription
 
 let package = Package(
-    name: "SideMenu",
+    name: "SideMenuPresenter",
     platforms: [.iOS(.v16)],
     products: [
         .library(
-            name: "SideMenu",
-            targets: ["SideMenu"]),
+            name: "SideMenuPresenter",
+            targets: ["SideMenuPresenter"]),
     ],
     targets: [
         .target(
-            name: "SideMenu"),
+            name: "SideMenuPresenter"),
     ]
 )
